@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Price Predictor - Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Product Price Predictor</h1>
+        <h2>Result</h2>
+        <div class="result">
+            <p>Product: {{ product }}</p>
+            <p>Minimum Price: ₹ {{ result }}</p>
+
+            <p>Month with Minimum Price: {{ month }}</p>
+            <p>Current price is: {{ cur_price}}</p>
+            <h2 align="center">Our Suggestion:</h2>
+            <h1><p align="center">{{ suggestion }}</p></h1>
+           <div class="product_image">
+               <img src="{{ url_for('static', filename='images/' + product + '.jpg') }}" alt="{{ product }}" width="700" height="500">
+
+           </div>
+
+        </div>
+        <div class="back-button">
+            <a href="/">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

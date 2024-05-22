@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Price Prediction - Predict</title>
+</head>
+<body>
+    <h1>Predicted Price</h1>
+    <p>Product: {{ product }}</p>
+    <p>Predicted Price: {{ result }}</p>
+    <p>Month with Minimum Price: {{ month }}</p>
+    {% if product_name %}
+        <h2>Product Image:</h2>
+        {% set image_filename = product_name|lower|replace(' ', '_') %}
+        <img src="{{ url_for('static', filename='images/' + image_filename + '.jpg') }}" alt="Product Image" class="product-image">
+    {% endif %}
+</body>
+</html>
